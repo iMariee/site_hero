@@ -9,13 +9,14 @@ body {
 	margin-left: 0px;
 	font-style: normal;
 	font-weight: 200;
+	cursor: url(../img/broom.png), auto;
 }
 /* Container */
 .container {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	height: 1500px;
+	height: 1300px;
 	background-color: #ffd6ed;
 }
 /* Navigation */
@@ -228,6 +229,7 @@ footer .footer_column p {
 	margin-right: 20px;
 }
 .button {
+	text-decoration: none;
 	width: 200px;
 	margin-top: 40px;
 	margin-right: auto;
@@ -249,7 +251,7 @@ footer .footer_column p {
 }
 .button:hover {
 	background-color: #FEFEFE;
-	color: #C4C4C4;
+	color: #ffceea;
 	cursor: pointer;
 }
 .copyright {
