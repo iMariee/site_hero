@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+<link href="css/page.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+  <header> <a href="index.html">
+    <h2 class="logo">🧚🏻‍♀️</h2>
+  </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li> <a href="services.html">Services</a></li>
+        <li> <a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    </header>
+    <form action="thanks.html" method="post">
+      <label for="name">Nom :</label><br>
+      <input type="text" id="name" name="name" required="required" tabindex="1"><br>
+      <label for="email">Email :</label><br>
+      <input type="email" id="email" name="email" required="required" tabindex="2"><br>
+      <label for="subject">Que désirez-vous ?</label><br>
+      <select name="Service désiré" id="subject" tabindex="3">
+        <option value="select" selected>Choisir</option>
+        <option value="cleaning">Nettoyage</option>
+        <option value="advices">Recommendations</option>
+        <option value="products">Produits</option>
+        <option value="other">Autre</option>
+      </select><br>
+      <label for="message">Message :</label><br>
+      <textarea id="message" name="message" spellcheck="on" tabindex="4"></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>

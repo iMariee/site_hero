@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Services</title>
+<link href="css/page.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+  <header> <a href="index.html">
+    <h2 class="logo">🧚🏻‍♀️</h2>
+  </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Acceuil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li> <a href="services.html">Services</a></li>
+        <li> <a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    </header>
+    <p style="text-align:center"><i>Je propose des services de nettoyage, des recommendations de produits ménagers et des produits ménagers maisons.</i></p>
+    <h1 style="text-align:center">Services</h1>
+    <p style="text-align:center">Comme je dois me nourrir, payer un loyer (ouah c'est dur la vie d'humain tout de même...) mais que j'économise aussi pour acheter de la cocaïne pour retourner sur ma planète, je propose multiple services ménagers :</p>
+    <ul style="text-align:center; list-style-type: none;">
+      <li>Nettoyage de maison</li>
+      <li>Nettoyage de voiture</li>
+      <li>Nettoyage de bureau</li>
+      <li>Nettoyage de magasin</li>
+      <li>Nettoyage de restaurant</li>
+      <li>Nettoyage de bateau</li>
+      <li>Nettoyage de piscine</li>
+      <li>Nettoyage de jardin</li>
+      <li>Et bien plus ! Contacter moi en cliquant <a href="contact.html">ici</a></li>
+    </ul>
+    <h1 style="text-align:center">Recommendations</h1>
+    <p style="text-align: center">Je propose aussi des recommendations de produits ménagers. <br>Je vous conseille de ne pas utiliser de produits chimiques, car ils sont mauvais pour la santé et pour l'environnement. Je vous conseille donc d'utiliser des produits naturels, comme le vinaigre blanc, le bicarbonate de soude, le citron... <br>Je propose aussi des produits naturels fais maison à la vente, dans la rubrique du dessous. <br>Je propose également des cours pour apprendre à connaître les bons produits ménagers ! <br><br>Remplissez ce test pour savoir quel produit est fait pour vous :</p>
+    <form id="cleaning_products">
+      <p>Que cherchez-vous à faire ?</p>
+      <input type="radio" id="clean" name="task" value="clean">Nettoyer<br>
+      <input type="radio" id="disinfect" name="task" value="disinfect">Désinfecter<br>
+      <input type="radio" id="rmstains" name="task" value="rmstains">Désincruster<br>
+      <input type="radio" id="all" name="task" value="all">Tout<br>
+
+      <p>Quel est votre type de sol ?</p>
+      <input type="radio" id="wood" name="floor" value="wood">Bois<br>
+      <input type="radio" id="tiles" name="floor" value="tiles">Carrelage<br>
+      <input type="radio" id="marble" name="floor" value="marble">Marbre<br>
+      <input type="radio" id="none" name="floor" value="none">Je ne veux pas nettoyer mon sol<br>
+
+      <p>Avez-vous des allergies ?</p>
+      <input type="radio" id="yes" name="allergies" value="yes">Oui<br>
+      <input type="radio" id="no" name="allergies" value="no">Non<br>
+
+      <p>Quel est votre budget ?</p>
+      <input type="radio" id="low" name="price" value="low">Moins de 10€<br>
+      <input type="radio" id="medium" name="price" value="medium">Entre 10€ et 20€<br>
+      <input type="radio" id="high" name="price" value="high">Plus de 20€<br>
+
+      <input type="submit" value="submit">
+    </form>
+    <script type="text/javascript">
+      document.getElementById('cleaning_products').addEventListener('submit', function(event) {
+        event.preventDefault();
+      
+        var task = document.querySelector('input[name="task"]:checked').value;
+        var floorType = document.querySelector('input[name="floor"]:checked').value;
+        var allergies = document.querySelector('input[name="allergies"]:checked').value;
+        var budget = document.querySelector('input[name="price"]:checked').value;
+      
+        var result = 'Basé sur vos réponses, je vous recommande ';
+      
+        switch(true) {
+          case (task === 'all' && floorType === 'none' && (allergies === 'no' || allergies === 'yes') && budget === 'high'):
+            result += 'le nettoyant multi-surface au vinaigre de la marque "La Droguerie".';
+            break;
+          case (task === 'all' && floorType === 'none' && allergies === 'no' && budget === 'medium'):
+            result += 'le nettoyant multi-surface Surfa Safe Premium Rouge.';
+            break;
+          case (task === 'all' && floorType === 'none' && allergies === 'no' && budget === 'low'):
+            result += 'le nettoyant vitres et surfaces écologique LVSM 600.';
+            break;
+          case ((task === 'clean' || task === 'disinfect' || task === 'rmstains' || task === 'all') && floorType === 'wood' && (allergies === 'yes' || allergies === 'no') && budget === 'low'):
+            result += 'le nettoyant Bona Wood Floor Cleaner Free & Simple. Il est spécialement conçu pour les personnes sensibles aux allergies.';
+            break;
+          case (task === 'disinfect' && floorType === 'tiles' && allergies === 'no' && budget === 'medium'):
+            result += 'le nettoyant détergent carrelage au savon huile de lin de Delcourt.';
+            break;
+          case (task === 'rmstains' && floorType === 'marble' && (allergies === 'yes' || allergies === 'no') && budget === 'high'):
+            result += 'le nettoyant rénovation pour marbre de Arcane.';
+            break;
+          case (task === 'disinfect' && (floorType === 'tiles' || floorType === 'marble') && allergies === 'no' && budget === 'low'):
+            result += 'de vous servir de la javel.';
+            break;
+          default:
+            result += 'de me contacter pour avoir des recommandations personnalisées.';
+            break;
+        }        
+      
+        alert(result);
+      });
+    </script>
+    <h1 style="text-align:center">Produits</h1>
+    <p>Je propose pas mal de produits différents faits maison. Je les propose à bas prix pour que ce soit accessible à tous</p>
+    </div
+    <section class="footer_banner" id="contact">
+        <h2 class="hidden">Footer Banner Section </h2>
+        <p class="hero_header">CONTACTEZ-MOI</p>
+        <div class="button"><a href="contact.html">Clique ici pour me contacter</a></div>
+      </section>
+      <!-- Copyrights Section -->
+      <div class="copyright">2024- <strong>Fée le ménage</strong></div>
+    </div>
+</body>
+</html>
