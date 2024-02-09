@@ -109,6 +109,17 @@ ul li:hover a {
 	padding-right: 20px;
 	color: #A3A3A3;
 }
+
+header, footer {
+	position: relative;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+}
+
 .about {
 	padding-left: 25px;
 	padding-right: 25px;
@@ -152,7 +163,87 @@ ul li:hover a {
 	margin-left: 0px;
 	color: #A3A3A3;
 }
-/* Parallax Section */
+
+/* Images */
+
+.container .planet {
+	width: 20%;
+	height: auto;
+	margin-top: -12%;
+	margin-left: 35%;
+}
+
+.description_planet {
+	font-weight: lighter;
+	font-variant: small-caps;
+	font-size: smaller;
+	font-style: italic;
+	margin-top: -0.9%;
+	margin-left: 43%;
+}
+
+.container .fairy_ground {
+	width: 20%;
+	height: auto;
+	margin-left: 15%;
+}
+
+.description_fairy_ground {
+	font-weight: lighter;
+	font-variant: small-caps;
+	font-size: smaller;
+	font-style: italic;
+	margin-top: 0.9%;
+	margin-left: 17%;
+}
+
+.container .fairy_discovery {
+	width: 20%;
+	margin-left: 65%;
+	margin-top: -50%;
+}
+
+.description_fairy_discovery {
+	font-weight: lighter;
+	font-variant: small-caps;
+	font-size: smaller;
+	font-style: italic;
+	margin-top: 0.9%;
+	margin-left: 68%;
+}
+
+.woman_cleaning {
+	width: 20%;
+	height: auto;
+	margin-left: 15%;
+}
+
+.cocaine {
+	width: 20%;
+	height: auto;
+	margin-left: 68%;
+	margin-top: -50%;
+}
+
+.description_cocaine {
+	font-weight: lighter;
+	font-variant: small-caps;
+	font-size: smaller;
+	font-style: italic;
+	margin-top: 0.9%;
+	margin-left: 70%;
+}
+
+/* Form */
+
+div.form_clean {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+	width: 60%;
+}
+
 .banner {
 	background-color: #ec7fbd;
 	height: 400px;
@@ -288,7 +379,7 @@ footer {
 	margin-bottom: 0px;
 	margin-left: 0px;
 }
-.container header nav {
+.container header nav p{
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
@@ -306,7 +397,7 @@ nav ul li {
 	width: 100%;
 	text-align: center;
 }
-.text_column {
+.text_column p{
 	width: 100%;
 	text-align: justify;
 	padding-top: 0px;
@@ -321,7 +412,7 @@ nav ul li {
 	width: 100%;
 	margin-top: 0px;
 }
-.parallax {
+.parallax p{
 	text-align: center;
 	margin-top: 0px;
 	margin-right: 0px;
@@ -487,5 +578,9 @@ nav ul li {
 .banner {
 	margin-top: 0px;
 	padding-top: 0px;
+}
+img {
+	width: 50%;
+	height: auto;
 }
 }
